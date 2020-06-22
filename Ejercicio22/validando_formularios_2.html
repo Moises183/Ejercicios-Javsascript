@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validacion de formularios</title>
+</head>
+<body>
+    <form action="" name="formulario" method="GET">
+        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre:">
+        <br>
+
+        <input type="radio" name="sexo" id="hombre" placeholder="Hombre">
+        <input type="radio" name="sexo" id="mujer" placeholder="Mujer">
+        <br>
+
+        <input type="checkbox" name="terminos" id="terminos"> Terminos y condiciones
+        <br>
+
+        <input type="submit" id="btn" name="btn" value="Enviar">
+    </form>
+
+    <script>
+        (function(){
+            var formulario = document.getElementsByName("formulario")[0],
+                elementos=formulario.elements,
+                boton=document.getElementById("btn");
+
+            var validarNombre=function(e){
+                if(formulario.nombre.value==0){
+                alert("Complete el campo");
+                e.preventDefault();
+                }
+            };
+            var validar=function(e){
+                validarNombre(e);
+            };
+            formulario.addEventListener("submit", validar);
+        }())
+    </script>
+    
+</body>
+</html>

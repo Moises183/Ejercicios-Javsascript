@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <script>
+        //Crear un elemento
+        var elemento=document.createElement("h2");
+        //Crear unn nodo de texto
+        var nodo=document.createTextNode("Este es un ejemplo de nodo");
+        //Añadir el nodo de texto a un elemento
+        nodo.appendChild(nodo);
+        //Agregar atributos al elemento
+        nodo.setAttribute("align", "center");
+        //Agregar el elemento al documento
+        document.getElementById("subtitulo").appendChild(elemento);
+    </script>
+</body>
+</html>

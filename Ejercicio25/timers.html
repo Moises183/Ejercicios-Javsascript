@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer, Timeout e Interval</title>
+</head>
+<body>
+    <script>
+        (function(){
+            var contador=o;
+
+            var saludo=function(){
+                contador++;
+                console.log(contador);
+                if(contador===5){
+                  clearInterval(intervalo);  
+                }
+            };
+            var intervalo=setInterval(saludo, 1000);
+
+        }())
+    </script>
+</body>
+</html>

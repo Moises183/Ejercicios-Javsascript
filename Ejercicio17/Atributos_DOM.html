@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atributos DOM</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #dddddd;
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px solid #aaaaaa;
+        }
+        .azul{
+            background: blue;
+            border: 1px solid #000;
+        }
+
+        .rojo{
+            background: red;
+            border: 1px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="conteneddor">
+        <a href="http://www.facebook.com" id="enlace">facebook</a>
+        <div class=""></div>
+        <div class=""></div>
+    </section>
+    
+    <script>
+        var elemento=document.createElement("div");
+        var padre=document.getElementById("contenedor");
+        var referencia=document.getElementsByTagName("div")[0];
+        padre.insertBefore(elemento, referencia);
+        elemento.setAttribute("class", "azul");
+
+    </script>
+</body>
+</html>
